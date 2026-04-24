@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import logoImg from '../assets/logo.jpg';
 
 interface LogoProps {
   className?: string;
@@ -10,16 +11,17 @@ interface LogoProps {
 export default function Logo({ className, size = 32 }: LogoProps) {
   return (
     <motion.div
-      className={className}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      className={`flex items-center justify-center overflow-hidden ${className}`}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       style={{ width: size, height: size }}
     >
       <img 
-        src="/logo.png" 
+        src={logoImg} 
         alt="RentMateBD Logo" 
-        className="w-full h-full object-contain rounded-lg"
+        className="w-full h-full object-contain"
         referrerPolicy="no-referrer"
+        loading="eager"
       />
     </motion.div>
   );
