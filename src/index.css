@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand: #FF7211;
+  --color-brand-muted: #FFF5EE;
+  --color-safe: #10B981;
+  --color-text-main: #0F172A;
+  --color-text-muted: #64748B;
+
+  --shadow-premium: 0 4px 20px -4px rgba(0, 0, 0, 0.05), 0 2px 10px -4px rgba(0, 0, 0, 0.02);
+  --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+  --shadow-compact: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-[#FDFDFD] text-text-main selection:bg-brand/10 selection:text-brand;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight leading-tight;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-vibrant {
+  @apply bg-white rounded-[24px] md:rounded-[32px] p-3 md:p-4 shadow-compact border border-black/[0.03] transition-all duration-500 hover:shadow-elevated hover:-translate-y-1;
+}
+
+.compact-btn {
+  @apply px-4 py-2 rounded-xl font-black uppercase tracking-[0.15em] text-[9px] md:text-[10px] transition-all duration-300 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.cat-pill-vibrant {
+  @apply px-4 py-2 md:px-6 md:py-2.5 rounded-xl md:rounded-2xl border border-black/[0.05] bg-white text-text-main font-bold text-[10px] md:text-xs uppercase tracking-widest cursor-pointer transition-all duration-300 hover:border-brand/40 hover:bg-brand/[0.02] active:scale-95;
+}
+
+.cat-pill-vibrant.active {
+  @apply bg-text-main border-text-main text-white shadow-lg shadow-black/10;
+}
+
+.smooth-transition {
+  @apply transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)];
+}
+
+.glow-brand {
+  box-shadow: 0 0 40px -10px rgba(255, 114, 17, 0.3);
+}
+
+/* MapLibre Customization */
+.maplibregl-ctrl-attrib {
+  display: none !important;
+}
+
+.maplibregl-canvas {
+  @apply grayscale brightness-110 contrast-105;
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 40s linear infinite;
+  display: flex;
+  width: max-content;
+}

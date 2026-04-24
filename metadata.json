@@ -1,0 +1,13 @@
+{
+  "name": "RentMateBD",
+  "description": "A trusted peer-to-peer equipment rental marketplace for urban Bangladesh, starting with Bashundhara R/A.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "P2P Marketplace",
+    "Digital Payments",
+    "Identity Verification"
+  ]
+}
