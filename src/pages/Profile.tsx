@@ -24,7 +24,7 @@ export default function Profile() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-24 md:pt-32 pb-24 px-6 md:px-8 max-w-6xl mx-auto"
+      className="pt-24 md:pt-32 px-6 md:px-8 max-w-6xl mx-auto"
     >
       <div className="bg-white rounded-[3rem] border border-black/[0.04] shadow-compact overflow-hidden">
         {/* Cover - Slimmer */}

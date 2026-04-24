@@ -31,7 +31,7 @@ export default function Explore() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-20 md:pt-28 pb-16"
+      className="pt-20 md:pt-28"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <header className="mb-6 md:mb-10">

@@ -60,7 +60,7 @@ export default function Lend() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-24 md:pt-32 pb-24 px-6 md:px-8 max-w-4xl mx-auto"
+      className="pt-24 md:pt-32 px-6 md:px-8 max-w-4xl mx-auto"
     >
       <div className="max-w-3xl mx-auto">
         <header className="mb-12">

@@ -25,7 +25,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pb-24"
+      className=""
     >
       {/* Hero Section */}
       <section className="pt-20 md:pt-32 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">

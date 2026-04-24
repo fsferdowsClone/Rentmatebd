@@ -30,7 +30,7 @@ export default function EditProfile() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      className="pt-28 md:pt-40 pb-32 px-6 md:px-8 max-w-4xl mx-auto"
+      className="pt-28 md:pt-40 px-6 md:px-8 max-w-4xl mx-auto"
     >
       <div className="max-w-3xl mx-auto">
         <header className="mb-12 flex items-center justify-between">

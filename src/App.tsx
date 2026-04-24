@@ -6,6 +6,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar';
+import { CommandPalette } from './components/CommandPalette';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import ListingDetail from './pages/ListingDetail';
@@ -19,6 +21,7 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-bg text-text-main font-sans selection:bg-brand/10 selection:text-brand">
+        <CommandPalette />
         <Navbar />
         <main className="transition-all duration-500">
           <AnimatePresence mode="wait">
@@ -34,6 +37,8 @@ export default function App() {
             </Routes>
           </AnimatePresence>
         </main>
+        
+        <Footer />
         
         {/* Mobile Navigation Spacer */}
         <div className="h-32 md:hidden" />

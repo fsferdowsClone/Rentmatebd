@@ -22,14 +22,30 @@ export default function Navbar() {
       {/* Desktop Navbar - Compact */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-4 hidden md:block">
         <div className="max-w-7xl mx-auto h-16 bg-white/80 backdrop-blur-xl rounded-2xl border border-black/[0.04] shadow-compact flex items-center justify-between px-6">
-          <Link to="/" className="flex items-center gap-2.5 group">
+          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <div className="w-8 h-8 bg-text-main rounded-lg flex items-center justify-center group-hover:bg-brand transition-colors">
               <Compass className="w-5 h-5 text-white" />
             </div>
-            <span className="text-lg font-black tracking-tighter text-text-main">
+            <span className="text-lg font-black tracking-tighter text-text-main hidden lg:block">
               RentMate<span className="text-brand">BD</span>
             </span>
           </Link>
+
+          <div className="flex-1 max-w-sm mx-8 hidden lg:block">
+             <button
+               onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))}
+               className="w-full flex items-center justify-between px-3 h-10 bg-black/[0.03] border border-black/[0.03] rounded-xl text-text-muted hover:bg-black/[0.05] transition-all group"
+             >
+                <div className="flex items-center gap-2">
+                   <Search className="w-3.5 h-3.5 opacity-30 group-hover:opacity-60" />
+                   <span className="text-[11px] font-bold opacity-30 group-hover:opacity-60">Search nodes...</span>
+                </div>
+                <div className="flex items-center gap-1">
+                   <span className="text-[8px] font-mono opacity-20 group-hover:opacity-40">⌘</span>
+                   <span className="text-[8px] font-mono opacity-20 group-hover:opacity-40">K</span>
+                </div>
+             </button>
+          </div>
 
           <div className="flex items-center gap-1">
             {[

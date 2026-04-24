@@ -29,7 +29,7 @@ export default function ListingDetail() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pb-16 pt-24 md:pt-32"
+      className="pt-24 md:pt-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <button 
