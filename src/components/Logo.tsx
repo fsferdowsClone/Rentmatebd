@@ -19,7 +19,7 @@ export default function Logo({ className, size = 32 }: LogoProps) {
       <img 
         src={logoImg} 
         alt="RentMateBD Logo" 
-        className="w-full h-full object-cover rounded-lg"
+        className="w-full h-full object-contain rounded-lg"
         referrerPolicy="no-referrer"
       />
     </motion.div>
