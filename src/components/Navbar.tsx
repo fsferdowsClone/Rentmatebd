@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Home, User, Compass, LayoutDashboard, PlusCircle, Search, MapPin, LogOut, Settings, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { MOCK_USERS } from '../constants';
+import Logo from './Logo';
 
 export default function Navbar() {
   const location = useLocation();
@@ -23,9 +24,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-4 hidden md:block">
         <div className="max-w-7xl mx-auto h-16 bg-white/80 backdrop-blur-xl rounded-2xl border border-black/[0.04] shadow-compact flex items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-2.5 group shrink-0">
-            <div className="w-8 h-8 bg-text-main rounded-lg flex items-center justify-center group-hover:bg-brand transition-colors">
-              <Compass className="w-5 h-5 text-white" />
-            </div>
+            <Logo size={32} />
             <span className="text-lg font-black tracking-tighter text-text-main hidden lg:block">
               RentMate<span className="text-brand">BD</span>
             </span>
@@ -153,9 +152,7 @@ export default function Navbar() {
       {/* Mobile Header - Compact */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-black/[0.03] h-14 flex items-center justify-between px-5 md:hidden">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-text-main rounded-lg flex items-center justify-center">
-            <Compass className="w-4 h-4 text-white" />
-          </div>
+          <Logo size={28} />
           <span className="text-base font-black tracking-tighter">RentMateBD</span>
         </Link>
         <button onClick={() => setIsProfileOpen(!isProfileOpen)}>

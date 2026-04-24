@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Compass, Mail, Github, Twitter, MapPin } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+import Logo from './Logo';
 
 export default function Footer() {
   const deployUrl = "https://rentmatebd.vercel.app/";
@@ -12,9 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 group mb-6">
-              <div className="w-8 h-8 bg-text-main rounded-lg flex items-center justify-center group-hover:bg-brand transition-colors">
-                <Compass className="w-5 h-5 text-white" />
-              </div>
+              <Logo size={32} />
               <span className="text-xl font-black tracking-tighter text-text-main">
                 RentMate<span className="text-brand">BD</span>
               </span>
