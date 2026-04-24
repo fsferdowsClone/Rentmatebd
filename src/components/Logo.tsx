@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import logoImg from '../assets/logo.png';
 
 interface LogoProps {
   className?: string;
@@ -16,7 +17,7 @@ export default function Logo({ className, size = 32 }: LogoProps) {
       style={{ width: size, height: size }}
     >
       <img 
-        src="/logo.jpg" 
+        src={logoImg} 
         alt="RentMateBD Logo" 
         className="w-full h-full object-contain rounded-lg"
         referrerPolicy="no-referrer"
