@@ -55,9 +55,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-[13px] md:text-lg opacity-60 font-medium max-w-lg mx-auto mb-10 md:mb-16 leading-relaxed px-4"
+              className="text-sm md:text-xl text-white/60 font-display font-medium max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed px-4 tracking-tight"
             >
-              Professional gear. Neighborly trust. <br className="hidden md:block" /> Secure asset sharing for the modern creator.
+              Lend to earn, borrow to save. <br className="hidden md:block" /> Secure asset sharing for the modern creator.
             </motion.p>
 
             {/* Sliding Hero Images - Optimized */}
